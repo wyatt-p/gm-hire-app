@@ -1,0 +1,8 @@
+rootProject.name = "gm-hire-app"
+include ':app'
+include ':core-api'
+include ':core-imp'
+include ':feature-git-api'
+include ':feature-git-imp'
+include ':network-api'
+include ':network-imp'

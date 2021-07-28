@@ -1,0 +1,62 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:4.2.2"
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+    ext {
+        androidxAppCompatVersion = "1.3.0"
+        androidxCLVersion = "2.0.1"
+        androidxTestJUnitVersion = "1.1.3"
+        googleMaterialVersion = "1.2.1"
+        junitVersion = "4.+"
+        espressoVersion = "3.4.0"
+
+        daggerVersion = "2.22.1"
+
+        rxJavaVersion = "2.2.8"
+        rxJavaAndroidVersion = "2.1.1"
+
+        libs = [
+                // Google
+                androidxAppCompat: ('androidx.appcompat:appcompat:' + androidxAppCompatVersion),
+                androidxCL: ('androidx.constraintlayout:constraintlayout:' +androidxCLVersion),
+                googleMaterial: ('com.google.android.material:material:' +googleMaterialVersion),
+
+                //DI/Dagger
+                daggerCore: ('com.google.dagger:dagger:' +daggerVersion),
+                daggerCompiler: ('com.google.dagger:dagger-compiler:' +daggerVersion),
+                daggerAndroid: ('com.google.dagger:dagger-android-support:' +daggerVersion),
+                daggerAndroidProcessor: ('com.google.dagger:dagger-android-processor:' +daggerVersion),
+
+                //RxJava
+                rxJava2: ('io.reactivex.rxjava2:rxjava:' +rxJavaVersion),
+                rxAndroid: ('io.reactivex.rxjava2:rxandroid:' +rxJavaAndroidVersion)
+        ]
+
+        tests = [
+                // Tests
+                junitTests: ('junit:junit:'+junitVersion),
+                androidxTestJUnit: ('androidx.test.ext:junit:'+androidxTestJUnitVersion),
+                espressoTests: ('androidx.test.espresso:espresso-core:'+espressoVersion)
+        ]
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        jcenter() // Warning: this repository is going to shut down soon
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
