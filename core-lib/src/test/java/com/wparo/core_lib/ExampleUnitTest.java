@@ -1,4 +1,4 @@
-package com.wparo.core_imp;
+package com.wparo.core_lib;
 
 import org.junit.Test;
 

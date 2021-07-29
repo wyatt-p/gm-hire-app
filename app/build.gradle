@@ -27,13 +27,16 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
+    buildFeatures {
+        viewBinding true
+    }
+
     //TODO possibly add some other build variants here
 }
 
 dependencies {
     // modules
-    implementation project(':core-api')
-    implementation project(':core-imp')
+    implementation project(':core-lib')
     implementation project(':feature-git-api')
     implementation project(':feature-git-imp')
     implementation project(':network-api')

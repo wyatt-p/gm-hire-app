@@ -30,6 +30,8 @@ android {
 
 dependencies {
 
+    implementation libs.rxJava2
+
     //DI
     implementation libs.daggerCore
     annotationProcessor libs.daggerCompiler

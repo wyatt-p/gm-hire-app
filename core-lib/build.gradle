@@ -26,6 +26,10 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
+    buildFeatures {
+        viewBinding true
+    }
 }
 
 dependencies {
@@ -34,6 +38,9 @@ dependencies {
     implementation libs.androidxAppCompat
     implementation libs.androidxCL
     implementation libs.googleMaterial
+    implementation libs.androidLifecycleExtension
+    implementation libs.androidLifecycleLiveData
+    implementation libs.androidLiveDataCore
 
     //Test implementations
     testImplementation tests.junitTests

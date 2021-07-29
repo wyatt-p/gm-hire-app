@@ -1,7 +1,6 @@
 rootProject.name = "gm-hire-app"
 include ':app'
-include ':core-api'
-include ':core-imp'
+include ':core-lib'
 include ':feature-git-api'
 include ':feature-git-imp'
 include ':network-api'
